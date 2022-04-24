@@ -1,0 +1,99 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #3C415C;
+}
+
+.drum-pad {
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1vw;
+    padding: 5vw;
+    max-width: 780px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    color: #3A3845;
+}
+
+.pad {
+    font-family: sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    position: relative;
+
+}
+
+
+.pressed {
+    outline: .3rem solid #EEEEEE;
+    transform: scale(.9);
+}
+
+.blue {
+    background: rgb(194,196,245);
+    background: radial-gradient(circle, rgba(194,196,245,1) 0%, rgba(0,0,235,1) 70%); 
+}
+
+.orange {
+    background: rgb(245,232,194);
+    background: radial-gradient(circle, rgba(245,232,194,1) 0%, rgba(255,186,3,1) 70%); 
+}
+
+.yellow {
+    background: rgb(245,244,194);
+    background: radial-gradient(circle, rgba(245,244,194,1) 0%, rgba(244,255,3,1) 70%); 
+}
+
+.yellow-orange {
+    background: rgb(245,234,194);
+    background: radial-gradient(circle, rgba(245,234,194,1) 0%, rgba(255,211,3,1) 70%); 
+}
+
+.skyblue {
+    background: rgb(174,221,238);
+    background: radial-gradient(circle, rgba(174,221,238,1) 0%, rgba(148,185,233,1) 70%); 
+}
+
+.cyan {
+    background: rgb(223,244,243);
+    background: radial-gradient(circle, rgba(223,244,243,1) 0%, rgba(148,232,233,1) 70%); 
+}
+
+.green {
+    background: rgb(177,244,186);
+    background: radial-gradient(circle, rgba(177,244,186,1) 0%, rgba(1,232,37,1) 70%); 
+}
+
+.red {
+    background: rgb(244,184,177);
+    background: radial-gradient(circle, rgba(244,184,177,1) 0%, rgba(232,1,1,1) 70%); 
+}
+
+.skygreen {
+    background: rgb(177,244,219);
+    background: radial-gradient(circle, rgba(177,244,219,1) 0%, rgba(1,232,130,1) 70%); 
+}
+
+@media (min-width: 768px) {
+    .pad:hover .tooltip-text {
+        visibility: visible;
+    };
+};
