@@ -35,6 +35,6 @@ const pads = document.querySelectorAll('.pad');
 pads.forEach(pad => pad.addEventListener('transitionend', removeTransition));
 
 pads.forEach(pad => pad.addEventListener('click', playAudio));
-pads.forEach(pad => pad.addEventListener('touchstart', playAudio));
+pads.forEach(pad => pad.addEventListener('touchend', playAudio));
 
 window.addEventListener('keydown', playPad);
