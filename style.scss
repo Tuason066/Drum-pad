@@ -34,7 +34,6 @@ body {
     display: block;
     cursor: pointer;
     border: none;
-    outline: none;
     border-radius: 5px;
     transition: all 0.1s ease;
     position: relative;
@@ -43,7 +42,7 @@ body {
 
 
 .pressed {
-    outline: .3rem solid #EEEEEE;
+    box-shadow: 0px 0px 1rem #eeeeee;
     transform: scale(.9);
 }
 
